@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="{{ url_for('static',filename='assets/css/material-kit.css') }}" rel="stylesheet" />
+
+  <!-- AR -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
 </head>
 
 <body>
@@ -57,6 +62,21 @@
       </div>
     </div>
   </div>
+
+  <div class="AR" style="margin : 0px; overflow: hidden;">
+          <a-scene embedded arjs>
+        <a-marker type="barcode" value="6">
+            <a-entity
+            position="0 -1 0"
+            scale="0.05 0.05 0.05"
+            gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+            ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+        </div>
+
+
   <footer class="footer footer-default">
     <div class="container">
       <nav class="float-left">

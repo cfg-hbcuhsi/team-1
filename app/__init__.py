@@ -5,3 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/ar')
+def ar():
+    return render_template('AR.html')
