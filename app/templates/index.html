@@ -1,87 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Hello, world!</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- Material Kit CSS -->
-  <link href="{{ url_for('static',filename='assets/css/material-kit.css') }}" rel="stylesheet" />
-
-
+	<title>Login V9</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}"  >
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/fonts/iconic/css/material-design-iconic-font.min.css') }}" >
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/vendor/animate/animate.css') }}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/vendor/css-hamburgers/hamburgers.min.css') }}"  >
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/vendor/animsition/css/animsition.min.css') }}"  >
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/vendor/select2/select2.min.css') }}"  >
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/vendor/daterangepicker/daterangepicker.css') }}" >
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='StarterPage/css/main.css') }}">
+<!--===============================================================================================-->
 </head>
-
 <body>
-  <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
-    <div class="container">
-      <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
-          Material Kit </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="material-icons">apps</i> Template
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ url_for('static',filename='assets/img/bg3.jpg') }}')">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 ml-auto mr-auto">
-          <div class="brand text-center">
-            <h1>Your title here</h1>
-            <h3 class="title text-center">Subtitle</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="main main-raised">
-    <div class="container">
-      <div class="section text-center">
-        <h2 class="title">Your main section here</h2>
-      </div>
-    </div>
-  </div>
+	
+	
+	<div class="container-login100" style="background-image: url('{{ url_for('static',filename='StarterPage/images/bg-01.jpg') }}');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form action="/home" method="POST" class="login100-form validate-form">
+				<span class="login100-form-title p-b-37">
+					Welcome
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter college name">
+					<input class="input100" type="text" name="college" placeholder="College name">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter annual income">
+					<input class="input100" type="password" name="income" placeholder="Annual income">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn">
+						Continue
+					</button>
+				</div>
 
 
 
-  <footer class="footer footer-default">
-    <div class="container">
-      <nav class="float-left">
-        <ul>
-          <li>
-            <a href="https://www.creative-tim.com/">
-              Creative Tim
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright float-right">
-        &copy;
-        <script>
-          document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> by
-        <a href="https://www.creative-tim.com/" target="blank">Creative Tim</a> for a better web.
-      </div>
-    </div>
-  </footer>
+
+			</form>
+
+			
+		</div>
+	</div>
+	
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='StarterPage/vendor/jquery/jquery-3.2.1.min.js') }}" ></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='StarterPage/vendor/animsition/js/animsition.min.js') }}"  ></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='StarterPage/vendor/bootstrap/js/popper.js') }}" ></script>
+	<script src="{{ url_for('static',filename='StarterPage/vendor/bootstrap/js/bootstrap.min.js') }}" ></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='StarterPage/vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='StarterPage/vendor/daterangepicker/moment.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='StarterPage/vendor/daterangepicker/daterangepicker.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='StarterPage/vendor/countdowntime/countdowntime.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static',filename='StarterPage/js/main.js') }}" ></script>
+
 </body>
-
 </html>
