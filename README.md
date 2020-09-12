@@ -8,7 +8,12 @@ Colleges often present a lump sum number to students and this can be discouragin
 
 ## Tech Stack   
 Frontend: HTML, CSS, Javascript       
-Backend: Python, Flask    
+Backend: Python, Flask      
+
+## Getting Start    
+1. Clone the repository     
+2. `python3 -m pip install flask`       
+3. Run app.py from root directory     
 
 ## Demo Video   
 [Youtube Video](https://www.youtube.com/watch?v=HoIKmkRz7X0&feature=youtu.be)   
