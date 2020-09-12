@@ -68,6 +68,9 @@ def reciepe():
 def housing():
     return render_template('housing.html')
 
+@app.route('/pricefinder')
+def pricefinder():
+    return render_template('pricefinder.html')
 
 
 if __name__ == "__main__":
