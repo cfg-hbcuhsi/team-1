@@ -1,5 +1,8 @@
-FROM tiangolo/uwsgi-nginx-flask:python:alpine3.6.9
-RUN apk --update add bash nano
-ENV app /static
-ENV app /static
-RUN pip install -r requirement.txt  
+
+FROM python:alpine3.7 
+COPY . /app
+WORKDIR /appD
+RUN pip install -r requirement.txt 
+EXPOSE 5001 
+ENTRYPOINT [ "python3" ] 
+CMD [ "app.py" ] 
