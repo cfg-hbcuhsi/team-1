@@ -10,6 +10,6 @@ def index():
 def books():
     return render_template('books.html')
 
-@app.route('/ar')
+@app.route('/jobpage')
 def ar():
-    return render_template('AR.html')
+    return render_template('jobpage.html')
