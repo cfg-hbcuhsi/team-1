@@ -25,8 +25,5 @@ def freefood():
 @app.route('/reciepe')
 def reciepe():
     return render_template('reciepe.html')
-@app.route('/dashboard')
-def dashboard():
-    return render_template('dashboard.html')
 
 
