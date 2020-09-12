@@ -7,7 +7,7 @@ The biggest challenge that students face when deciding if they want to go to col
 Colleges often present a lump sum number to students and this can be discouraging for students from lower incomes. We wanted to break that down and provide resources on how that large number can quickly become smaller and more manageable. Our solution provides insight on how that large number is not what you are going to pay as well as resources on campus that help save money along the way.   
 
 ## Tech Stack   
-Frontend: HTML, CSS, Javascript
+Frontend: HTML, CSS, Javascript       
 Backend: Python, Flask    
 
 ## Demo Video   
