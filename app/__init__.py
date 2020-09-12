@@ -64,6 +64,11 @@ def freefood():
 def reciepe():
     return render_template('reciepe.html')
 
+@app.route('/housing')
+def housing():
+    return render_template('housing.html')
+
+
 
 if __name__ == "__main__":
 
