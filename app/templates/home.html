@@ -68,13 +68,13 @@
                         <li class="nav-item">
                           <a class="nav-link" href="#messages" data-toggle="tab">
                             <i class="material-icons">chat</i>
-                            Tuition without FAFSA
+                            Net Cost
                           </a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="#settings" data-toggle="tab">
                             <i class="material-icons">build</i>
-                            Other fees
+                            Financial Aid
                           </a>
                         </li>
                       </ul>
@@ -86,13 +86,18 @@
                     <div class="tab-pane active" id="profile">
                       <h3>{{college}}</h3>
                       <ul>
-                      {% for row in data %}
+                      {% for row in AdCost %}
                       <li>{{ row[0]|e }} : {{ row[1]|e }} </li>
                     {% endfor %}
                       </ul>
                     </div>
                     <div class="tab-pane" id="messages">
-                      <p> I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+                        <h3>{{college}}</h3>
+                        {% for row in NetCost %}
+                      <li>{{ row[0]|e }} : {{ row[1]|e }} </li>
+                    {% endfor %}
+
+
                     </div>
                     <div class="tab-pane" id="settings">
                       <p>I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it&#x2019;s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
