@@ -1,14 +1,32 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request, session
+from werkzeug.utils import redirect
+import csv
 app = Flask(__name__)
+app.secret_key="zbc"
 
-@app.route('/')
+def loader(college):
+    try:
+        data = csv.DictReader(open("sticker_price.csv"))
+        for row in data:
+            if college == row['Institution Name']:
+                return list(row.items())[7:13]
+    except Exception as e:
+        print(e)
+
+@app.route('/', methods=['POST','GET'])
 def index():
+    if request.method == "POST":
+        session['college'] = request.form['college']
+        session['income'] = request.form['income']
+        return redirect('/home')
     return render_template('index.html')
 
 @app.route('/home', methods=['POST','GET'])
 def home():
-    return render_template('home.html')
+    college = session.get('college')
+    data = loader(college)
+
+    return render_template('home.html', data=data, college=college, income=session.get('income'))
 
 @app.route('/books')
 def books():
@@ -27,3 +45,6 @@ def reciepe():
     return render_template('reciepe.html')
 
 
+if __name__ == "__main__":
+
+    print(type(loader('CUNY City College')[0]))
