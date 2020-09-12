@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Hello, world!</title>
+  <title>Welcome</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="{{ url_for('static',filename='assets/css/material-kit.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='MDB-Free_4/css/mdb.min.css') }}" rel="stylesheet" />
+
 
 </head>
 
@@ -30,6 +32,7 @@
                 <div class="collapse navbar-collapse">
                   <ul class="navbar-nav">
                     <li class="nav-item"><a href="/jobpage" class="nav-link">On Campus Jobs</a></li>
+                      <li class="nav-item"><a href="/housing" class="nav-link">Housing</a></li>
                     <li class="nav-item"><a href="/books" class="nav-link">Book Resources</a></li>
                     <li class="nav-item"><a href="/freefood" class="nav-link">Free Food Event</a></li>
                     <li class="nav-item"><a href="/reciepe" class="nav-link">Food Receipts</a></li>
@@ -37,11 +40,11 @@
                 </div>
               </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ url_for('static',filename='assets/img/bg3.jpg') }}')">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ url_for('static',filename='img/asoggetti-LFjxCbhs0QM-unsplash.jpg') }}')">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
-          <div class="brand text-center">
+          <div class="animated fadeInUp brand text-center">
             <h1>Welcome</h1>
           </div>
         </div>
@@ -53,7 +56,7 @@
       <div class="section text-left">
 
 
-          <div class="card card-nav-tabs">
+          <div class="animated fadeInUp card card-nav-tabs">
                 <div class="card-header card-header-primary">
                   <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
                   <div class="nav-tabs-navigation">
@@ -83,7 +86,7 @@
                 </div>
                 <div class="card-body ">
                   <div class="tab-content text-center">
-                    <div class="tab-pane active" id="profile">
+                    <div class="wow fadeInUp tab-pane active" id="profile">
                       <h3>{{college}}</h3>
 
                       {% for row in AdCost %}
@@ -91,7 +94,7 @@
                     {% endfor %}
 
                     </div>
-                    <div class="tab-pane" id="messages">
+                    <div class="animated fadeInUp tab-pane" id="messages">
                         <h3>{{college}}</h3>
                         {% for row in NetCost %}
                       <li>{{ row[0]|e }} : {{ row[1]|e }} </li>
@@ -99,7 +102,7 @@
 
 
                     </div>
-                    <div class="tab-pane" id="settings">
+                    <div class="animated fadeInUp tab-pane" id="settings">
                         <h3>Annual Income: {{income}}</h3>
                         {% for row in FA %}
                       <li>{{ row[0]|e }} : {{ row[1]|e }} </li>
@@ -108,34 +111,61 @@
                   </div>
                 </div>
       </div>
-         <div class="container">
-              <div class = "section text-center">
-                "Ways to Save for College!"
+         <div class="container text-center">
+            <div class = "section text-center">
+                <h3>  "Ways to Save for College!" </h3>
               </div>
-              <a href = "/books">
-                <img alt = "Books" src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_883231284_200013331818843182490_335833.jpg"
-                     width = 150" height = "150">
-              </a>
-           <span style = "padding-right: 150px" ></span>
-              <a href = "/jobpage">
-                <img alt = "Jobs" src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/21/2016/11/Handshake-Job-Search-480x270.png?v=6778"
-                     width = 150" height = "150">
-              </a>
-          <span style = "padding-right: 150px" ></span>
-              <a href = "/freefood">
-                <img alt = "Free Food" src="https://sd.keepcalms.com/i/keep-calm-and-eat-free-food.png"
-                     width = 150" height = "150">
-              </a>
-         <span style = "padding-right: 150px" ></span>
-              <a href = "/reciepe">
-                <img alt = "Recipes" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkrCNamJmYdGUikvAFOs0avwWsrsM2H3t8ZA&usqp=CAU"
-                     width = 150" height = "150">
-              </a>
-      </div>
+            <div class="row">
+                <div class="col-sm">
+                  <div class="wow fadeInUp card" >
+  <a href="/books"><img class="card-img-top" src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_883231284_200013331818843182490_335833.jpg" rel="nofollow" alt="Card image cap">
+  </a>
+      <div class="card-body">
+    <p class="card-text">Buy or rent cheaper books</p>
+  </div>
+</div>
+                </div>
+                <div class="col-sm">
+                  <div class="wow fadeInUp card" >
+  <a href="/jobpage"><img class="card-img-top" src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/21/2016/11/Handshake-Job-Search-480x270.png?v=6778" rel="nofollow" alt="Card image cap">
+  </a><div class="card-body">
+    <p class="card-text">Explore on-campus jobs</p>
+  </div>
+</div>
+                </div>
+
+
+              </div>
+
+           <div class="row">
+                <div class="col-sm">
+                  <div class="wow fadeInUp card" >
+  <a href="/freefood"><img class="card-img-top" src="https://sd.keepcalms.com/i/keep-calm-and-eat-free-food.png" rel="nofollow" alt="Card image cap">
+  </a>
+      <div class="card-body">
+    <p class="card-text">Food events</p>
+  </div>
+</div>
+                </div>
+                <div class="col-sm">
+                  <div class="wow fadeInUp card" >
+  <a href="/reciepe"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkrCNamJmYdGUikvAFOs0avwWsrsM2H3t8ZA&usqp=CAU" rel="nofollow" alt="Card image cap">
+  </a>
+      <div class="card-body">
+    <p class="card-text">Cook your own foods</p>
+  </div>
+</div>
+                </div>
+
+
+              </div>
+
+
+
     </div>
   </div>
-
-
+    </div>
+  </div>
   <footer class="footer footer-default">
     <div class="container">
 
@@ -153,7 +183,7 @@
   <!--  Google Maps Plugin    -->
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="{{ url_for('static',filename='assets/js/material-kit.js')}}?v=2.0.7" type="text/javascript"></script>
-
-
+ <script type="text/javascript" src="{{ url_for('static',filename='MDB-Free_4/js/mdb.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='wow.js')}}"></script>
 
 </html>
