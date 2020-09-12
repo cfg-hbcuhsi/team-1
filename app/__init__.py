@@ -21,3 +21,7 @@ def jobpage():
 @app.route('/freefood')
 def freefood():
     return render_template('freefood.html')
+
+@app.route('/reciepe')
+def reciepe():
+    return render_template('reciepe.html')
