@@ -72,7 +72,9 @@ def housing():
 def pricefinder():
     return render_template('pricefinder.html')
 
-
+@app.route('/transportation')
+def transportation():
+    return render_template('transportation.html')
 if __name__ == "__main__":
 
     data = loaderFinancial("CUNY City College")

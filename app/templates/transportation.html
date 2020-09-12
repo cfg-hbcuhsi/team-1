@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Transportation</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- Material Kit CSS -->
+  <link href="{{ url_for('static',filename='assets/css/material-kit.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='MDB-Free_4/css/mdb.min.css') }}" rel="stylesheet" />
+
+
+</head>
+
+<body class="index-page sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+                <div class="navbar-translate">
+                  <a class="navbar-brand" href="/home">Home</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav">
+                    <li class="nav-item"><a href="/jobpage" class="nav-link">On Campus Jobs</a></li>
+                      <li class="nav-item"><a href="/housing" class="nav-link">Housing</a></li>
+                    <li class="nav-item"><a href="/books" class="nav-link">Book Resources</a></li>
+                    <li class="nav-item"><a href="/freefood" class="nav-link">Free Food Event</a></li>
+                    <li class="nav-item"><a href="/reciepe" class="nav-link">Food Receipts</a></li>
+                      <li class="nav-item"><a href="/pricefinder" class="nav-link">Price Finder</a></li>
+                      <li class="nav-item active"><a href="/transportation" class="nav-link">Transportation</a></li>
+                  </ul>
+                </div>
+              </div>
+  </nav>
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('{{ url_for('static',filename='img/ny.jpg') }}')">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="animated fadeInUp brand text-center">
+            <h1>Transportation</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+    <div class="container">
+      <div class="section text-left">
+        <div class="row">
+          <div class="col-4">
+            <div class="animated fadeInUp list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Metrobus</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Bike Renting</a>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="animated fadeInUp tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                  <div class="row">
+                  <div class="col-lg">
+                      <div class="card">
+                          <div class="card-header card-header-icon card-header-rose">
+                              <div class="card-icon">
+                        <i class="material-icons">language</i>
+                            </div>
+
+                          </div>
+                          <div class="card-body">
+                              <div class="embed-responsive embed-responsive-4by3">
+                                <iframe
+                                        class="embed-responsive-item"
+                                width="530"
+                                height="450"
+                                frameborder="0" style="border:0"
+                                src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen>
+                                </iframe>
+                              </div>
+                        </div>
+                    </div>
+                    </div>
+
+                  </div>
+              </div>
+
+
+                <div class="animated fadeInUp tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    <div class="row">
+
+                      <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-header card-header-info">
+                            <div class="card-text">
+                              <h4 class="card-title"></h4>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                             Metrobus in your area
+                        <br/>
+                              
+                          </div>
+                          <div class="card-body">
+                            Bike renting
+                       <br/>
+                             
+                         </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer footer-default">
+    <div class="container">
+
+    </div>
+  </footer>
+</body>
+
+ <script src="{{url_for('static',filename='assets/js/core/jquery.min.js')}}" type="text/javascript"></script>
+  <script src="{{ url_for('static',filename='assets/js/core/popper.min.js')}}" type="text/javascript"></script>
+  <script src="{{ url_for('static',filename='assets/js/core/bootstrap-material-design.min.js')}}" type="text/javascript"></script>
+  <script src="{{ url_for('static',filename='assets/js/plugins/moment.min.js')}}"></script>
+
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src=" {{ url_for('static',filename='assets/js/plugins/nouislider.min.js')}}" type="text/javascript"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  <script src="{{ url_for('static',filename='assets/js/material-kit.js')}}?v=2.0.7" type="text/javascript"></script>
+ <script type="text/javascript" src="{{ url_for('static',filename='MDB-Free_4/js/mdb.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='wow.js')}}"></script>
+
+
+</html>
