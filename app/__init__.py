@@ -11,5 +11,9 @@ def books():
     return render_template('books.html')
 
 @app.route('/jobpage')
-def ar():
+def jobpage():
     return render_template('jobpage.html')
+
+@app.route('/freefood')
+def freefood():
+    return render_template('freefood.html')
